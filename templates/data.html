@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>DataPage</title>
+</head>
+<style >
+	body{
+		background-color: rgb(222, 150, 212);
+    background-size: 280%;
+    background-position: -400px 0px;
+		}
+		div.formname{
+
+      background-color: rgba(33, 31, 31, 0.433);
+  width: 180%;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px soid rgba(255, 255, 255, 0.3);
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+  color: #fff;
+		}
+		div.main{
+			width: 800px;
+			margin-left: 30px;
+		}
+		h1{
+			font-weight: bolder;
+			text-align: center;
+			padding: 20px;
+			font-family: sans-serif;
+			font-size: 80px;
+		}
+		p#style{
+			width: 300px;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: 0;
+    background-color:  #aec6cf;
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3);
+    padding: 7px;
+    color: black;
+	text-align: center;
+
+		}
+		label{
+			font-weight: bold;
+			font-family: sans-serif;
+    font-size: 30px;
+    font-style: italic;
+    color: black;
+
+		}
+		form#formname{
+			margin-left: 560px;
+		}
+</style>
+<body>
+	<div class="main">
+    <div class="formname">
+    	<h1>Employee details</h1>
+	<form name="formname" id="formname">
+
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<label>Id</label>
+<p id="style">{{employee.employee_id}}</p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<label>Name</label>
+<p id="style">{{employee.name}}</p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;
+
+
+<label>Age</label>
+<p id="style">{{employee.age}}</p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<label>Position</label>
+<p id="style">{{employee.position}}</p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+<label>Email</label>
+<p id="style">{{employee.email}}</p>
+<br>
+<br>
+    </form >
+</div>
+</div>
+</body>
+</html>
+

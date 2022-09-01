@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+  width: 100%;
+  background-color: #aec6cf;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=number], select {
+  width: 100%;
+  background-color: #aec6cf;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 100%;
+  background-color:#000080 ;
+  color: pastel blue;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+input[type=submit]:white{
+  background-color: #000080
+}
+
+div {
+  border-radius: 5px;
+  background-color:#FFFFFF ;
+  padding: 20px;
+}
+</style>
+<body>
+
+<h3>Employee Details</h3>
+
+<div>
+  <form action="/data">
+    <label for="EMPLOYEEID">EmployeeID:</label>
+   <input type="text" placeholder="Your ID..."
+                   onkeypress="return onlyNumberKey(event)"
+                   maxlength="11">
+
+	 <label for="NAME">Name:</label>
+    <input type="text" id="NAME" name="lastname" placeholder="Your NAME...">
+
+
+	<label for="AGE">AGE:</label>
+	<input type="number" id="AGE" name="AGE" placeholder="Your AGE.."  min="1" max="120">
+
+
+	<label for="Position">Position:</label>
+    <input type="text" id="Position" name="lastname" placeholder="Your POSITION...">
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<script>
+    function onlyNumberKey(evt) {
+
+        // Only ASCII character in that range allowed
+        var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+        if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+            return false;
+        return true;
+    }
+</script>
+
+</body>
+</html>

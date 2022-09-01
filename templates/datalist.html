@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Employees management system </title>
+</head>
+<style >
+
+	body{
+		background-color: rgb(224, 150, 212);
+
+			background-size: 280%;
+			background-position: -400px 0px;
+			margin-right: 80px;
+			margin-left: 80px;
+
+		}
+		h1{
+			text-align: center;
+			padding: 20px;
+			font-family: sans-serif;
+			font-size: 50px;
+			font-weight:bolder;
+		}
+		h3{
+			font-family: sans-serif;
+			font-size: 15px;
+			font-style: italic;
+
+
+		}
+		div{
+			border: 2px outset #54105262;
+			border-radius: 3px;
+			background-color: rgba(244, 244, 244, 0.501);
+			box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+		}
+</style>
+
+
+<body>
+      <h1>
+         Employee Details
+      </h1>
+      <br><br>
+
+      <hr/>
+      {%- for message in get_flashed_messages() %}
+         {{ message }}
+      {%- endfor %}
+
+      <h2>Employees List</h2>
+      <table border="2" padding = "5">
+         <thead>
+            <tr>
+               <th>Employee Id</th>
+               <th>Name</th>
+               <th>Age</th>
+               <th>Position</th>
+              	  <th>Email</th>
+               <th>Delete</th>
+               <th>Update</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for employee in Employees %}
+               <tr>
+                  <td>{{ employee.employee_id}}</td>
+                  <td>{{ employee.name }}</td>
+                  <td>{{ employee.age }}</td>
+                  <td>{{ employee.position }}</td>
+                  <td>{{ employee.email }}</td>
+                  <td><a href="{{url_for('update',employee_id=employee.employee_id)}}" id="update" >Update</a></td>
+                  <td><a href="{{url_for('delete',employee_id=employee.employee_id)}}" id="delete" >Delete</a></td>
+
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+      <br><br>
+      <a href="{{ url_for('addEmployee') }}">Add New Employee</a>
+   </body>
+
+</html>
+
